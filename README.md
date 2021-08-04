@@ -2,12 +2,9 @@
 Tips and useful functions
 
 
-## `simplify()`
-
-    df %>% summarise(x = simplify(strsplit(x, ",")))
     
 
-## `uncount()`
+## [`uncount()`](https://tidyr.tidyverse.org/reference/uncount.html)
 Copies each row n number of times
     
     df <- tibble(x = c("a", "b"), n = c(1, 2))
@@ -18,7 +15,7 @@ Copies each row n number of times
     #> 2 b    
     #> 3 b  
 
-## `relocate()`
+## [`relocate()`](https://dplyr.tidyverse.org/reference/relocate.html)
 Move a column to a different position
 
     df <- tibble(a = 1, b = 1, c = 1, d = "a", e = "a", f = "a")
@@ -26,3 +23,23 @@ Move a column to a different position
     #> # A tibble: 1 x 6
     #>   f         a     b     c d     e    
     #> 1 a         1     1     1 a     a    
+
+
+## [`simplify()`](https://purrr.tidyverse.org/reference/as_vector.html)
+
+    df %>% summarise(x = simplify(strsplit(x, ",")))
+    
+## [`view()`](https://tibble.tidyverse.org/reference/view.html)
+(lowercase!) will view the tibble and return the value, so you can debug long pipe chains.
+
+    df %>%
+       view("before filter") %>%
+       filter(a > 0) %>%
+       view("after filter")
+       
+## [`%T>%`](https://magrittr.tidyverse.org/reference/tee.html)
+will return the original value instead of the result of the function. It's useful for print() or View() calls in the middle of a pipe chain.
+
+df %T>%
+   View("before filter") %>%
+   filter(a > 0)
