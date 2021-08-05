@@ -43,3 +43,8 @@ will return the original value instead of the result of the function. It's usefu
 df %T>%
    View("before filter") %>%
    filter(a > 0)
+   
+## ggsignif
+
+![image](https://user-images.githubusercontent.com/2257540/128414887-4db0bcc0-537e-4dbd-8aaa-b4e41c73c179.png)
+
