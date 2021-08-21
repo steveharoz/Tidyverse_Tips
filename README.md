@@ -40,10 +40,15 @@ Move a column to a different position
 ## [`%T>%`](https://magrittr.tidyverse.org/reference/tee.html)
 will return the original value instead of the result of the function. It's useful for print() or View() calls in the middle of a pipe chain.
 
-df %T>%
-   View("before filter") %>%
-   filter(a > 0)
-   
+    df %T>%
+       View("before filter") %>%
+       filter(a > 0)
+
+## Custom linetype
+To make a custom dash style, specify the length of the line (hex 1-F) and the length of the space.
+
+    geom_line(linetype = "21")
+
 ## ggsignif
 
 ![image](https://user-images.githubusercontent.com/2257540/128414887-4db0bcc0-537e-4dbd-8aaa-b4e41c73c179.png)
