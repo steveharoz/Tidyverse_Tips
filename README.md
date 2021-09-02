@@ -53,3 +53,7 @@ To make a custom dash style, specify the length of the line (hex 1-F) and the le
 
 ![image](https://user-images.githubusercontent.com/2257540/128414887-4db0bcc0-537e-4dbd-8aaa-b4e41c73c179.png)
 
+
+## get ggplot data
+![image](https://user-images.githubusercontent.com/2257540/131897725-b029e854-cd21-40a7-8e89-a8cf659364cb.png)
+
