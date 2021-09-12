@@ -54,8 +54,31 @@ To make a custom dash style, specify the length of the line (hex 1-F) and the le
 ![image](https://user-images.githubusercontent.com/2257540/128414887-4db0bcc0-537e-4dbd-8aaa-b4e41c73c179.png)
 
 
-## get ggplot data
-![image](https://user-images.githubusercontent.com/2257540/131897725-b029e854-cd21-40a7-8e89-a8cf659364cb.png)
+## get data from ggplot object
+
+```r
+gg1 = ggplot(mtcars) + 
+  aes(x=mpg, y=wt) +
+  geom_point() +
+  geom_smooth(se = FALSE)
+gg1
+
+# build the plot
+gg_object = ggplot_build(gg1)
+
+# get the data for 2nd geom
+smooth_line_data = gg_object$data[[2]]
+
+gg1 + annotate(
+  geom = "text",
+  x = 25,
+  y = mean(smooth_line_data$y[round(smooth_line_data$x) == 25]),
+  hjust = -.1,
+  label = "<- x = 25 here"
+)
+```
+![image](https://user-images.githubusercontent.com/2257540/132988523-d59536e7-134b-453d-a0f4-772c09e2979f.png)
+
 
 ## [`skimr::skim()`](https://docs.ropensci.org/skimr/) 
 overview of dataframe
