@@ -16,13 +16,13 @@ Copies each row n number of times
     #> 3 b  
 
 ## [`relocate()`](https://dplyr.tidyverse.org/reference/relocate.html)
-Move a column to a different position
+Move a column to a different position (moves to first position if new position is unspecified)
 
-    df <- tibble(a = 1, b = 1, c = 1, d = "a", e = "a", f = "a")
+    df <- tibble(a = 1, b = 2, c = 3, d = 4, e = 5, f = 6)
     df %>% relocate(f)
     #> # A tibble: 1 x 6
     #>   f         a     b     c d     e    
-    #> 1 a         1     1     1 a     a    
+    #> 1 6         1     2     3 4     4    
 
 
 ## [`simplify()`](https://purrr.tidyverse.org/reference/as_vector.html)
