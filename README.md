@@ -110,4 +110,10 @@ skim(iris)
 ## 4 Petal.Width           0             1  1.20 0.762   0.1   0.3  1.3    1.8   2.5 ▇▁▇▅▃
 ```
 
+## optimize()
+find an x that will minimize or maximize f(x)
+
+```r
+optimize(function(x) abs(exp(x)-23.14069), c(0, 10))
+```
 
