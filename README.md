@@ -120,3 +120,8 @@ optimize(function(x) abs(exp(x)-23.14069), c(0, 10))
 ## Custom point shape
 https://coolbutuseless.github.io/2021/11/04/custom-ggplot2-point-shapes-with-gggrid/  
 https://twitter.com/yutannihilat_en/status/1493237440043126785
+
+
+## datasets
+
+* tidycensus
