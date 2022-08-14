@@ -125,3 +125,11 @@ https://twitter.com/yutannihilat_en/status/1493237440043126785
 ## datasets
 
 * tidycensus
+
+## ggplot data
+
+```r
+ggplot(mtcars) +
+    aes(wt, mpg) +
+    geom_point(data = ~. |> filter(mpg > 20))
+```
