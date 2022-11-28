@@ -133,3 +133,6 @@ ggplot(mtcars) +
     aes(wt, mpg) +
     geom_point(data = ~. |> filter(mpg > 20))
 ```
+
+## [`ggview()`](https://github.com/idmn/ggview)
+view plot with specific size
