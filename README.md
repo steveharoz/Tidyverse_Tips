@@ -131,7 +131,7 @@ https://twitter.com/yutannihilat_en/status/1493237440043126785
 ```r
 ggplot(mtcars) +
     aes(wt, mpg) +
-    geom_point(data = ~. |> filter(mpg > 20))
+    geom_point(data = . %>% filter(mpg > 20))
 ```
 
 ## [`ggview()`](https://github.com/idmn/ggview)
