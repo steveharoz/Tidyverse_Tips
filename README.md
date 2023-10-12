@@ -134,5 +134,10 @@ ggplot(mtcars) +
     geom_point(data = . %>% filter(mpg > 20))
 ```
 
+## [multiple color scales](https://teunbrand.github.io/ggh4x/)
+
+![image](https://github.com/steveharoz/Tidyverse_Tips/assets/2257540/47f33cf9-fc7a-4c09-a82a-76c33ab10827)
+
+
 ## [`ggview()`](https://github.com/idmn/ggview)
 view plot with specific size
